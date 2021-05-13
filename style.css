@@ -1,0 +1,167 @@
+*{
+  /* overrding default margin and padding and we want the box sizing to Have
+  fixed size */
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+#body{
+  height: auto;
+  background-color: lightcyan;
+  padding-bottom: 50px;
+}
+#heading{
+  position: relative;
+}
+#heading-images{
+  position: relative;
+  top:-100px;
+
+}
+#background-img{
+  width:100%;
+  height: 150px;
+}
+#logo{
+  position: absolute;
+  left: 0;
+}
+#toggle-night-and-day{
+  position: absolute;
+  right:0;
+}
+
+#filter-search{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 50px;
+  position: relative;
+  top: -30px;
+  background: white;
+
+}
+.input-text{
+  width:304px;
+  height: 100%;
+  border:0;
+  margin-left:10px;
+  padding-left:20px;
+}
+#filter-input-one, #filter-input-two{
+  border-right:1px solid gray;
+}
+#filter-input-two, #filter-input-three{
+  padding-left:20px;
+}
+#filter-input-three{
+  display: flex;
+  align-items: center;
+}
+#full-time{
+  margin-right:10px;
+}
+#search-btn{
+  background: #5964E0;
+  color:white;
+  /* padding top, botoom, left and right */
+  padding:3px 20px;
+  border: 0;
+  margin-left: 50px;
+}
+#content{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 60px;
+  margin-top:50px;
+}
+.load-all-btn{
+  /* this element is positioned relative to the parent element, which is body */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 70px;
+  background: #5964E0;
+  color:white;
+  border:0;
+  padding:3px 20px;
+  display: none;
+}
+#closeBtn{
+  display: block;
+}
+.jobDesc:hover{
+  background-color: lightgray;
+  cursor: pointer;
+}
+.jobtitle:hover{
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+#jobDescInfo{
+  background: white;
+  padding: 50px;
+  display: none;
+}
+#loading{
+  /* this element is positioned relative to the body element by default since it
+  doesn't have a parent that is positioned */
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+#nightAndDay{
+  width: 60px;
+  height: 30px;
+}
+/* #filter-search{
+  background: white;
+} */
+@media(max-width:1000px){
+  #content{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #filter-search{
+    height: auto;
+  }
+  #heading, .input-text{
+    width:100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+}
+@media(max-width:541px){
+
+  #content{
+    grid-template-columns: 1fr;
+    justify-items : center;
+  }
+  #filter-search{
+    display: block;
+    position: static;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* width:90%; */
+  }
+  #heading{
+    margin-bottom: 30px;
+  }
+  #filter-input-two{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid gray;
+  }
+  #filter-input-three, #filter-input-one{
+    border:1px solid gray;
+  }
+  .jobDesc{
+    width:100%;
+  }
+
+}
